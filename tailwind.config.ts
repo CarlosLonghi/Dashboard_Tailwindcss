@@ -6,6 +6,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      maxWidth: {
+        app: '42rem'
+      },
       colors: {
         purple: '#8257e6'
       }

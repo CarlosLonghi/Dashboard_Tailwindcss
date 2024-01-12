@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <main className="p-8 bg-slate-100 text-slate-900 dark:text-slate-100 dark:bg-slate-900 h-screen">
-      <div className="max-w-2xl flex flex-col justify-center items-center gap-4 h-full m-auto">
+      <div className="max-w-app flex flex-col justify-center items-center gap-4 h-full m-auto">
         <h1 
           className="font-bold text-3xl md:text-5xl">
           Título
