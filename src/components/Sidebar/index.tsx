@@ -1,6 +1,7 @@
 'use client'
 import { Logo } from './Logo'
 import { MagnifyingGlass } from '@phosphor-icons/react'
+import { MainNavigation } from './MainNavigation'
 
 export function Sidebar() {
   return (
@@ -15,6 +16,8 @@ export function Sidebar() {
           placeholder="Buscar"
         />
       </div>
+
+      <MainNavigation />
     </aside>
   )
 }
