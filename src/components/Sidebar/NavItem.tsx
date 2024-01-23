@@ -10,13 +10,13 @@ export function NavItem({ title, icon: Icon }: NavItemProps) {
   return (
     <a
       href="#"
-      className="group flex items-center gap-2 rounded px-3 py-2 hover:bg-green-50"
+      className="group flex items-center gap-2 rounded px-3 py-2 hover:bg-emerald-50"
     >
       <Icon className="h-5 w-5 text-zinc-400" />
-      <span className="font-medium text-zinc-600 group-hover:text-green-800">
+      <span className="font-medium text-zinc-600 group-hover:text-emerald-800">
         {title}
       </span>
-      <CaretDown className="ml-auto h-5 w-5 text-zinc-400 group-hover:text-green-600" />
+      <CaretDown className="ml-auto h-5 w-5 text-zinc-400 group-hover:text-emerald-600" />
     </a>
   )
 }
