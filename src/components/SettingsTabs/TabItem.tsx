@@ -15,7 +15,7 @@ export function TabItem({ value, title }: TabItemProps) {
     >
       {title}
 
-      <div className="absolute -bottom-px left-0 right-0 hidden h-0.5 bg-emerald-600 group-data-[state=active]:block" />
+      <div className="absolute -bottom-px left-0 right-0 h-0.5 bg-transparent transition duration-300 ease-in group-data-[state=active]:bg-emerald-600" />
     </Tabs.Trigger>
   )
 }
