@@ -1,8 +1,10 @@
 'use client'
 
 import * as Tabs from '@radix-ui/react-tabs'
-import { TabItem } from './TabItem'
 import { useState } from 'react'
+
+import { TabItem } from './TabItem'
+import { TabContent } from './TabContent'
 
 export function SettingsTabs() {
   const [currentTab, setCurrentTab] = useState('tab1')
@@ -13,47 +15,27 @@ export function SettingsTabs() {
         className="mt-6 flex w-full items-center gap-4 border-b border-zinc-200"
         aria-label="Settings"
       >
-        <TabItem
-          value="tab1"
-          title="My Details"
-          isSelected={currentTab === 'tab1'}
-        />
-        <TabItem
-          value="tab2"
-          title="Profile"
-          isSelected={currentTab === 'tab2'}
-        />
-        <TabItem
-          value="tab3"
-          title="Password"
-          isSelected={currentTab === 'tab3'}
-        />
-        <TabItem value="tab4" title="Team" isSelected={currentTab === 'tab4'} />
-        <TabItem value="tab5" title="Plan" isSelected={currentTab === 'tab5'} />
-        <TabItem
-          value="tab6"
-          title="Billing"
-          isSelected={currentTab === 'tab6'}
-        />
-        <TabItem
-          value="tab7"
-          title="Email"
-          isSelected={currentTab === 'tab7'}
-        />
-        <TabItem
-          value="tab8"
-          title="Notifications"
-          isSelected={currentTab === 'tab8'}
-        />
-        <TabItem
-          value="tab9"
-          title="Integrations"
-          isSelected={currentTab === 'tab9'}
-        />
+        <TabItem value="tab1" title="My Details" />
+        <TabItem value="tab2" title="Profile" />
+        <TabItem value="tab3" title="Password" />
+        <TabItem value="tab4" title="Team" />
+        <TabItem value="tab5" title="Plan" />
+        <TabItem value="tab6" title="Billing" />
+        <TabItem value="tab7" title="Email" />
+        <TabItem value="tab8" title="Notifications" />
+        <TabItem value="tab9" title="Integrations" />
       </Tabs.List>
 
-      <Tabs.Content value="tab1">Conteúdo 1</Tabs.Content>
-      <Tabs.Content value="tab2">Conteúdo 2</Tabs.Content>
+      <TabContent
+        value="tab1"
+        title="Conteúdo tab 1"
+        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia sequi quaerat quidem ipsum eligendi id provident natus quisquam totam accusamus voluptates similique, necessitatibus suscipit nostrum nesciunt inventore harum laudantium voluptate fugiat odit sit et explicabo nam iste? Rem, neque beatae?"
+      />
+      <TabContent
+        value="tab2"
+        title="Conteúdo tab 2"
+        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia sequi quaerat quidem ipsum eligendi id provident natus quisquam totam accusamus voluptates similique, necessitatibus suscipit nostrum nesciunt inventore harum laudantium voluptate fugiat odit sit et explicabo nam iste? Rem, neque beatae? adipisicing elit. Mollitia sequi quaerat quidem ipsum eligendi id provident natus quisquam totam accusamus voluptates similique, necessitatibus suscipit nostrum nesciunt inventore harum laudantium voluptate fugiat odit sit et explicabo nam iste? Rem, neque beatae?"
+      />
     </Tabs.Root>
   )
 }
