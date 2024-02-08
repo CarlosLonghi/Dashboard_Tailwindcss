@@ -2,8 +2,9 @@
 
 import * as Tabs from '@radix-ui/react-tabs'
 import * as Input from '@/components/Input'
+import * as FileInput from '@/components/Form/FileInput'
 
-import { At, CloudArrowUp, User } from '@phosphor-icons/react'
+import { At } from '@phosphor-icons/react'
 
 export function TabContentDetails() {
   return (
@@ -77,35 +78,11 @@ export function TabContentDetails() {
               This will be displayed on your profile.
             </span>
           </label>
-          <div className="flex items-start gap-5">
-            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-emerald-50">
-              <User className="h-8 w-8 text-emerald-500" />
-            </div>
-
-            {/* Custom Input Fyle */}
-            <label
-              htmlFor="photo"
-              className="hover:bg-emerald-25 group flex flex-1 cursor-pointer flex-col items-center gap-3 rounded-lg border border-zinc-300 px-6 py-4 text-center text-zinc-500 shadow-sm hover:border-emerald-200 hover:text-emerald-600"
-            >
-              <div className="border-6 rounded-full border-zinc-100 bg-zinc-200 p-2 transition ease-in group-hover:border-emerald-50 group-hover:bg-emerald-100">
-                <CloudArrowUp className="h-5 w-5 text-zinc-600 transition ease-in group-hover:text-emerald-600" />
-              </div>
-
-              <div className="flex flex-col items-center gap-1">
-                <span className="text-sm">
-                  <span className="font-semibold text-emerald-700">
-                    Click to upload
-                  </span>{' '}
-                  or drag and drop
-                </span>
-                <span className="text-xs">
-                  SVG, PNG, JPG or GIF (max. 800x400px)
-                </span>
-              </div>
-            </label>
-
-            <input type="file" className="sr-only" id="photo" />
-          </div>
+          <FileInput.Root className="flex items-start gap-5">
+            <FileInput.ImagePreview />
+            <FileInput.Trigger htmlFor="photo" />
+            <FileInput.Control id="photo" />
+          </FileInput.Root>
         </div>
 
         <div className="grid grid-cols-form items-center gap-3 pt-5">
@@ -157,7 +134,10 @@ export function TabContentDetails() {
               Share a few snippets of your work.
             </span>
           </label>
-          <div>Input file projects</div>
+          <FileInput.Root>
+            <FileInput.Trigger htmlFor="projects" />
+            <FileInput.Control id="projects" multiple />
+          </FileInput.Root>
         </div>
 
         <div className="flex items-center justify-end gap-2 pt-4">
