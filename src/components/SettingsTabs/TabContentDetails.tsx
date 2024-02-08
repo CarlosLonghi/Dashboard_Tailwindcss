@@ -80,8 +80,8 @@ export function TabContentDetails() {
           </label>
           <FileInput.Root className="flex items-start gap-5">
             <FileInput.ImagePreview />
-            <FileInput.Trigger htmlFor="photo" />
-            <FileInput.Control id="photo" />
+            <FileInput.Trigger />
+            <FileInput.Control />
           </FileInput.Root>
         </div>
 
@@ -135,8 +135,8 @@ export function TabContentDetails() {
             </span>
           </label>
           <FileInput.Root>
-            <FileInput.Trigger htmlFor="projects" />
-            <FileInput.Control id="projects" multiple />
+            <FileInput.Trigger />
+            <FileInput.Control multiple />
           </FileInput.Root>
         </div>
 

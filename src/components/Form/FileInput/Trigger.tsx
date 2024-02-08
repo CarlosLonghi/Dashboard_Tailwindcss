@@ -1,12 +1,13 @@
-import { ComponentProps } from 'react'
+'use client'
+
 import { CloudArrowUp } from '@phosphor-icons/react'
+import { useFileInput } from './Root'
 
-export type TriggerProps = ComponentProps<'label'>
-
-export function Trigger(props: TriggerProps) {
+export function Trigger() {
+  const { id } = useFileInput()
   return (
     <label
-      {...props}
+      htmlFor={id}
       className="hover:bg-emerald-25 group flex flex-1 cursor-pointer flex-col items-center gap-3 rounded-lg border border-zinc-300 px-6 py-4 text-center text-zinc-500 shadow-sm hover:border-emerald-200 hover:text-emerald-600"
     >
       <div className="border-6 rounded-full border-zinc-100 bg-zinc-200 p-2 transition group-hover:border-emerald-50 group-hover:bg-emerald-100">
