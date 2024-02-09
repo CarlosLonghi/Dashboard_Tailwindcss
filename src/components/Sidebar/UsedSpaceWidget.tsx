@@ -11,7 +11,7 @@ export function UsedSpaceWidget() {
       </div>
 
       <div className="h-2 rounded-full bg-emerald-100">
-        <div className="h-2 w-4/5 rounded-full bg-emerald-600"></div>
+        <hr className="h-2 w-4/5 rounded-full bg-emerald-600" />
       </div>
 
       <div className="space-x-3">
