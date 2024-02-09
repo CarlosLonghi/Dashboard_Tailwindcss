@@ -1,8 +1,16 @@
 import * as Tabs from '@radix-ui/react-tabs'
 import * as Input from '@/components/Input'
 import * as FileInput from '@/components/Form/FileInput'
-import { At } from '@phosphor-icons/react'
 import { Select, Option } from '../Form/Select'
+import {
+  At,
+  LinkSimple,
+  ListBullets,
+  ListNumbers,
+  TextB,
+  TextItalic,
+} from '@phosphor-icons/react'
+import { Textarea } from '../Form/Textarea'
 
 export function TabContentDetails() {
   return (
@@ -125,7 +133,42 @@ export function TabContentDetails() {
               Write a short introduction.
             </span>
           </label>
-          <div>Inputs bio</div>
+          <div className="space-y-3">
+            <div className="grid grid-cols-2 gap-3">
+              <Select defaultValue="normal">
+                <Option value="normal" text="Normal Text" />
+              </Select>
+
+              <div className="flex items-center gap-1">
+                <button className="rounded-md p-2 hover:bg-zinc-100">
+                  <TextB weight="bold" className="h-4 w-4 text-zinc-500" />
+                </button>
+
+                <button className="rounded-md p-2 hover:bg-zinc-100">
+                  <TextItalic weight="bold" className="h-4 w-4 text-zinc-500" />
+                </button>
+
+                <button className="rounded-md p-2 hover:bg-zinc-100">
+                  <LinkSimple weight="bold" className="h-4 w-4 text-zinc-500" />
+                </button>
+
+                <button className="rounded-md p-2 hover:bg-zinc-100">
+                  <ListBullets
+                    weight="bold"
+                    className="h-4 w-4 text-zinc-500"
+                  />
+                </button>
+
+                <button className="rounded-md p-2 hover:bg-zinc-100">
+                  <ListNumbers
+                    weight="bold"
+                    className="h-5 w-5 text-zinc-500"
+                  />
+                </button>
+              </div>
+            </div>
+            <Textarea id="bio" placeholder="Write your bio here :)" />
+          </div>
         </div>
 
         <div className="grid grid-cols-form items-center gap-3 pt-5">
