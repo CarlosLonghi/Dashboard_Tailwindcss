@@ -1,8 +1,7 @@
 'use client'
 
-import * as Tabs from '@radix-ui/react-tabs'
 import { useState } from 'react'
-
+import * as Tabs from '@radix-ui/react-tabs'
 import { TabItem } from './TabItem'
 import { TabContentDetails } from './TabContentDetails'
 
@@ -27,7 +26,6 @@ export function SettingsTabs() {
       </Tabs.List>
 
       <TabContentDetails />
-
     </Tabs.Root>
   )
 }

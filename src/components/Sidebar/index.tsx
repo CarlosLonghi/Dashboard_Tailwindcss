@@ -1,5 +1,10 @@
 'use client'
+
 import { Logo } from './Logo'
+import { NavItem } from './NavItem'
+import { UsedSpaceWidget } from './UsedSpaceWidget'
+import { Profile } from './Profile'
+import * as Input from '../Input'
 import {
   ChartLineUp,
   CheckSquareOffset,
@@ -11,11 +16,6 @@ import {
   MagnifyingGlass,
   Users,
 } from '@phosphor-icons/react'
-
-import { NavItem } from './NavItem'
-import { UsedSpaceWidget } from './UsedSpaceWidget'
-import { Profile } from './Profile'
-import * as Input from '../Input'
 
 export function Sidebar() {
   return (

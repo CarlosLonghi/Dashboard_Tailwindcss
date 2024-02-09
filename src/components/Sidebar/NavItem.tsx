@@ -1,5 +1,5 @@
-import { CaretDown } from '@phosphor-icons/react'
 import { ElementType } from 'react'
+import { CaretDown } from '@phosphor-icons/react'
 
 export interface NavItemProps {
   title: string

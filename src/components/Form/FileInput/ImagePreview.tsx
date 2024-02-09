@@ -1,8 +1,8 @@
 'use client'
 
-import { User } from '@phosphor-icons/react'
-import { useFileInput } from './Root'
 import { useMemo } from 'react'
+import { useFileInput } from './Root'
+import { User } from '@phosphor-icons/react'
 
 export function ImagePreview() {
   const { files } = useFileInput()
@@ -23,7 +23,12 @@ export function ImagePreview() {
     )
   } else {
     return (
-      <img src={previewURL} className="h-16 w-16 rounded-full object-cover" />
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={previewURL}
+        className="h-16 w-16 rounded-full object-cover"
+        alt=""
+      />
     )
   }
 }

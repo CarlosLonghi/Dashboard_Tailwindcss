@@ -3,7 +3,6 @@
 import * as Tabs from '@radix-ui/react-tabs'
 import * as Input from '@/components/Input'
 import * as FileInput from '@/components/Form/FileInput'
-
 import { At } from '@phosphor-icons/react'
 
 export function TabContentDetails() {
