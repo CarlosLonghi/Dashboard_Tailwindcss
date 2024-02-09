@@ -1,9 +1,8 @@
-'use client'
-
 import * as Tabs from '@radix-ui/react-tabs'
 import * as Input from '@/components/Input'
 import * as FileInput from '@/components/Form/FileInput'
 import { At } from '@phosphor-icons/react'
+import { Select } from '../Form/Select'
 
 export function TabContentDetails() {
   return (
@@ -100,7 +99,7 @@ export function TabContentDetails() {
           >
             Country
           </label>
-          <div>Input select</div>
+          <Select />
         </div>
 
         <div className="grid grid-cols-form items-center gap-3 pt-5">
