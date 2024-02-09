@@ -1,11 +1,14 @@
 import { File, Trash } from '@phosphor-icons/react'
 import { useFileInput } from './Root'
 import { formatBytes } from '@/utils/format-bytes'
+import { useAutoAnimate } from '@formkit/auto-animate/react'
 
 export function FileList() {
   const { files } = useFileInput()
+  const [parent] = useAutoAnimate()
+
   return (
-    <div className="mt-4 space-y-3">
+    <div ref={parent} className="mt-4 space-y-3">
       {files.map((file) => {
         return (
           <div
