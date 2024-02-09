@@ -1,5 +1,3 @@
-'use client'
-
 import { File, Trash } from '@phosphor-icons/react'
 import { useFileInput } from './Root'
 import { formatBytes } from '@/utils/format-bytes'

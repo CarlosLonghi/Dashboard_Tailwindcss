@@ -2,7 +2,7 @@ import * as Tabs from '@radix-ui/react-tabs'
 import * as Input from '@/components/Input'
 import * as FileInput from '@/components/Form/FileInput'
 import { At } from '@phosphor-icons/react'
-import { Select } from '../Form/Select'
+import { Select, Option } from '../Form/Select'
 
 export function TabContentDetails() {
   return (
@@ -99,7 +99,10 @@ export function TabContentDetails() {
           >
             Country
           </label>
-          <Select />
+          <Select placeholder="Select a Country...">
+            <Option value="br" text="Brazil" />
+            <Option value="eua" text="United States" />
+          </Select>
         </div>
 
         <div className="grid grid-cols-form items-center gap-3 pt-5">
@@ -109,7 +112,10 @@ export function TabContentDetails() {
           >
             Timezone
           </label>
-          <div>Input select</div>
+          <Select placeholder="Select a Timezone...">
+            <Option value="br" text="South America Time (PST) UTC-10:00" />
+            <Option value="eua" text="Pacific Standard Time (PST) UTC-08:00" />
+          </Select>
         </div>
 
         <div className="grid grid-cols-form items-center gap-3 pt-5">

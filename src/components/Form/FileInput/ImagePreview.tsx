@@ -1,5 +1,3 @@
-'use client'
-
 import { useMemo } from 'react'
 import { useFileInput } from './Root'
 import { User } from '@phosphor-icons/react'

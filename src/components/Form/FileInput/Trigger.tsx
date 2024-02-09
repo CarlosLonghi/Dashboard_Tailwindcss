@@ -1,5 +1,3 @@
-'use client'
-
 import { CloudArrowUp } from '@phosphor-icons/react'
 import { useFileInput } from './Root'
 
