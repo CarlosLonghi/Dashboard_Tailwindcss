@@ -14,7 +14,10 @@ import { Textarea } from '../Form/Textarea'
 
 export function TabContentDetails() {
   return (
-    <Tabs.Content className="mt-6 flex flex-col overflow-y-auto" value="tab1">
+    <Tabs.Content
+      className="mt-6 flex flex-col overflow-y-auto outline-none"
+      value="tab1"
+    >
       <div className="flex items-center justify-between border-b border-zinc-200 pb-5">
         <div className="space-y-1">
           <h2 className="text-lg font-medium text-zinc-900">Personal info</h2>
@@ -140,26 +143,26 @@ export function TabContentDetails() {
               </Select>
 
               <div className="flex items-center gap-1">
-                <button className="rounded-md p-2 hover:bg-zinc-100">
+                <button className="rounded-md border border-transparent p-2 outline-none hover:bg-zinc-100 focus:border-emerald-400 focus:ring-4 focus:ring-emerald-50">
                   <TextB weight="bold" className="h-4 w-4 text-zinc-500" />
                 </button>
 
-                <button className="rounded-md p-2 hover:bg-zinc-100">
+                <button className="rounded-md border border-transparent p-2 outline-none hover:bg-zinc-100 focus:border-emerald-400 focus:ring-4 focus:ring-emerald-50">
                   <TextItalic weight="bold" className="h-4 w-4 text-zinc-500" />
                 </button>
 
-                <button className="rounded-md p-2 hover:bg-zinc-100">
+                <button className="rounded-md border border-transparent p-2 outline-none hover:bg-zinc-100 focus:border-emerald-400 focus:ring-4 focus:ring-emerald-50">
                   <LinkSimple weight="bold" className="h-4 w-4 text-zinc-500" />
                 </button>
 
-                <button className="rounded-md p-2 hover:bg-zinc-100">
+                <button className="rounded-md border border-transparent p-2 outline-none hover:bg-zinc-100 focus:border-emerald-400 focus:ring-4 focus:ring-emerald-50">
                   <ListBullets
                     weight="bold"
                     className="h-4 w-4 text-zinc-500"
                   />
                 </button>
 
-                <button className="rounded-md p-2 hover:bg-zinc-100">
+                <button className="rounded-md border border-transparent p-2 outline-none hover:bg-zinc-100 focus:border-emerald-400 focus:ring-4 focus:ring-emerald-50">
                   <ListNumbers
                     weight="bold"
                     className="h-5 w-5 text-zinc-500"
