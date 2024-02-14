@@ -15,11 +15,8 @@ import { Button } from '../Button'
 
 export function TabContentDetails() {
   return (
-    <Tabs.Content
-      className="mt-6 flex flex-col overflow-y-auto outline-none"
-      value="tab1"
-    >
-      <div className="flex items-center justify-between border-b border-zinc-200 pb-5">
+    <Tabs.Content className="mt-6 flex flex-col outline-none" value="tab1">
+      <div className="flex flex-col justify-between gap-4 border-b border-zinc-200 pb-5 lg:flex-row lg:items-center">
         <div className="space-y-1">
           <h2 className="text-lg font-medium text-zinc-900">Personal info</h2>
           <span className="text-sm text-zinc-500">
@@ -41,24 +38,31 @@ export function TabContentDetails() {
         className="mt-5 flex w-full flex-col gap-5 divide-y divide-zinc-200"
         action=""
       >
-        <div className="grid grid-cols-form items-center gap-3">
+        <div className="flex flex-col gap-3 lg:grid lg:grid-cols-form lg:items-center">
           <label
             htmlFor="firstName"
             className="text-sm font-medium text-zinc-700"
           >
             Name
           </label>
-          <div className="grid grid-cols-2 gap-6">
+          <div className="flex flex-col gap-3 lg:grid lg:grid-cols-2 lg:gap-6">
             <Input.Root>
-              <Input.Control placeholder="First name" />
+              <Input.Control id="firstName" placeholder="First name" />
             </Input.Root>
+
+            <label
+              htmlFor="lastName"
+              className="text-sm font-medium text-zinc-700 lg:sr-only"
+            >
+              Last name
+            </label>
             <Input.Root>
-              <Input.Control placeholder="Second name" />
+              <Input.Control id="lastName" placeholder="Second name" />
             </Input.Root>
           </div>
         </div>
 
-        <div className="grid grid-cols-form items-center gap-3 pt-5">
+        <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form lg:items-center">
           <label htmlFor="email" className="text-sm font-medium text-zinc-700">
             Email address
           </label>
@@ -74,21 +78,21 @@ export function TabContentDetails() {
           </Input.Root>
         </div>
 
-        <div className="grid grid-cols-form items-center gap-3 pt-5">
+        <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form lg:items-center">
           <label htmlFor="photo" className="text-sm font-medium text-zinc-700">
             Your photo
             <span className="mt-0.5 block text-sm font-normal text-zinc-500">
               This will be displayed on your profile.
             </span>
           </label>
-          <FileInput.Root className="flex items-start gap-5">
+          <FileInput.Root className="flex flex-col gap-5 lg:flex-row lg:items-start">
             <FileInput.ImagePreview />
             <FileInput.Trigger />
             <FileInput.Control />
           </FileInput.Root>
         </div>
 
-        <div className="grid grid-cols-form items-center gap-3 pt-5">
+        <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form lg:items-center">
           <label htmlFor="role" className="text-sm font-medium text-zinc-700">
             Role
           </label>
@@ -97,7 +101,7 @@ export function TabContentDetails() {
           </Input.Root>
         </div>
 
-        <div className="grid grid-cols-form items-center gap-3 pt-5">
+        <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form lg:items-center">
           <label
             htmlFor="country"
             className="text-sm font-medium text-zinc-700"
@@ -110,7 +114,7 @@ export function TabContentDetails() {
           </Select>
         </div>
 
-        <div className="grid grid-cols-form items-center gap-3 pt-5">
+        <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form lg:items-center">
           <label
             htmlFor="timezone"
             className="text-sm font-medium text-zinc-700"
@@ -123,7 +127,7 @@ export function TabContentDetails() {
           </Select>
         </div>
 
-        <div className="grid grid-cols-form items-center gap-3 pt-5">
+        <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form lg:items-center">
           <label htmlFor="bio" className="text-sm font-medium text-zinc-700">
             Bio
             <span className="mt-0.5 block text-sm font-normal text-zinc-500">
@@ -168,7 +172,7 @@ export function TabContentDetails() {
           </div>
         </div>
 
-        <div className="grid grid-cols-form items-center gap-3 pt-5">
+        <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form lg:items-center">
           <label
             htmlFor="projects"
             className="text-sm font-medium text-zinc-700"

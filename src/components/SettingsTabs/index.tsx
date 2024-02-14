@@ -30,10 +30,10 @@ export function SettingsTabs() {
         </ScrollArea.Viewport>
 
         <ScrollArea.Scrollbar
-          className="flex h-1 translate-y-2 touch-none select-none bg-zinc-200"
+          className="flex h-1 translate-y-2 touch-none select-none bg-zinc-100"
           orientation="horizontal"
         >
-          <ScrollArea.Thumb className="relative flex-1 cursor-pointer rounded-lg bg-zinc-400" />
+          <ScrollArea.Thumb className="cursor-pointer rounded-lg bg-zinc-300 active:cursor-grabbing" />
         </ScrollArea.Scrollbar>
       </ScrollArea.Root>
 
