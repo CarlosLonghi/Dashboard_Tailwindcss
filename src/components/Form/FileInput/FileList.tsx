@@ -2,6 +2,7 @@ import { File, Trash } from '@phosphor-icons/react'
 import { useFileInput } from './Root'
 import { formatBytes } from '@/utils/format-bytes'
 import { useAutoAnimate } from '@formkit/auto-animate/react'
+import { Button } from '@/components/Button'
 
 export function FileList() {
   const { files } = useFileInput()
@@ -38,9 +39,9 @@ export function FileList() {
                 </div>
               </div>
 
-              <button className="">
-                <Trash className="h-5 w-5 text-zinc-500 transition hover:text-red-800" />
-              </button>
+              <Button variant="ghost">
+                <Trash className="h-5 w-5 text-zinc-500 transition group-hover:text-red-600" />
+              </Button>
             </div>
           </div>
         )

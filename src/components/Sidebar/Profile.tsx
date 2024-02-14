@@ -1,4 +1,5 @@
 import { SignOut } from '@phosphor-icons/react'
+import { Button } from '../Button'
 
 export function Profile() {
   return (
@@ -17,15 +18,12 @@ export function Profile() {
           carloslonghi.cl@gmail.com
         </span>
       </div>
-      <button
-        type="button"
-        className="group ml-auto rounded p-1 hover:bg-zinc-100"
-      >
+      <Button type="button" variant="ghost">
         <SignOut
           weight="duotone"
           className="h-5 w-5 text-zinc-500 group-hover:text-red-700"
         />
-      </button>
+      </Button>
     </div>
   )
 }

@@ -136,32 +136,32 @@ export function TabContentDetails() {
                 <Option value="normal" text="Normal Text" />
               </Select>
 
-              <div className="flex items-center gap-1">
-                <button className="rounded-md border border-transparent p-2 outline-none hover:bg-zinc-100 focus:border-emerald-400 focus:ring-4 focus:ring-emerald-50">
+              <div className="flex items-center gap-2">
+                <Button variant="ghost">
                   <TextB weight="bold" className="h-4 w-4 text-zinc-500" />
-                </button>
+                </Button>
 
-                <button className="rounded-md border border-transparent p-2 outline-none hover:bg-zinc-100 focus:border-emerald-400 focus:ring-4 focus:ring-emerald-50">
+                <Button variant="ghost">
                   <TextItalic weight="bold" className="h-4 w-4 text-zinc-500" />
-                </button>
+                </Button>
 
-                <button className="rounded-md border border-transparent p-2 outline-none hover:bg-zinc-100 focus:border-emerald-400 focus:ring-4 focus:ring-emerald-50">
+                <Button variant="ghost">
                   <LinkSimple weight="bold" className="h-4 w-4 text-zinc-500" />
-                </button>
+                </Button>
 
-                <button className="rounded-md border border-transparent p-2 outline-none hover:bg-zinc-100 focus:border-emerald-400 focus:ring-4 focus:ring-emerald-50">
+                <Button variant="ghost">
                   <ListBullets
                     weight="bold"
                     className="h-4 w-4 text-zinc-500"
                   />
-                </button>
+                </Button>
 
-                <button className="rounded-md border border-transparent p-2 outline-none hover:bg-zinc-100 focus:border-emerald-400 focus:ring-4 focus:ring-emerald-50">
+                <Button variant="ghost">
                   <ListNumbers
                     weight="bold"
-                    className="h-5 w-5 text-zinc-500"
+                    className="h-4 w-4 text-zinc-500"
                   />
-                </button>
+                </Button>
               </div>
             </div>
             <Textarea id="bio" placeholder="Write your bio here :)" />
