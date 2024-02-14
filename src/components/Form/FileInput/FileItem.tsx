@@ -1,18 +1,49 @@
 import { formatBytes } from '@/utils/format-bytes'
 import { Button } from '@/components/Button'
-import { CheckCircle, File, Trash } from '@phosphor-icons/react'
+import { CheckCircle, File, SpinnerGap, Trash } from '@phosphor-icons/react'
+import { tv, VariantProps } from 'tailwind-variants'
 
-export interface FileItemProps {
+const fileItem = tv({
+  slots: {
+    container:
+      'group flex items-start gap-4 rounded-lg border border-zinc-200 p-4',
+    icon: 'rounded-full border-4 p-2',
+    deleteButton: 'hover:text-red-600',
+  },
+
+  variants: {
+    state: {
+      progress: {
+        container: '',
+        icon: 'border-emerald-100 bg-emerald-200 text-emerald-600',
+      },
+      complete: {
+        container: 'border-emerald-500',
+        icon: 'border-emerald-100 bg-emerald-200 text-emerald-600',
+      },
+      error: {
+        container: 'bg-error-25 border-error-300',
+        icon: 'border-error-50 bg-error-100 text-error-600',
+        deleteButton: 'invisible',
+      },
+    },
+  },
+
+  defaultVariants: {
+    state: 'progress',
+  },
+})
+
+export interface FileItemProps extends VariantProps<typeof fileItem> {
   name: string
   size: number
 }
 
-export function FileItem({ name, size }: FileItemProps) {
-  const state = 'error' as 'complete' | 'progress' | 'error'
-
+export function FileItem({ name, size, state }: FileItemProps) {
+  const { container, icon, deleteButton } = fileItem({ state })
   return (
-    <div className="group flex items-start gap-4 rounded-lg border border-zinc-200 p-4">
-      <div className="rounded-full border-4 border-emerald-100 bg-emerald-200 p-2 text-emerald-600">
+    <div className={container()}>
+      <div className={icon()}>
         <File className="h-4 w-4" />
       </div>
 
@@ -26,7 +57,7 @@ export function FileItem({ name, size }: FileItemProps) {
               <span className="text-error-600 text-sm">{name}</span>
             </div>
 
-            <button className="text-error-600 text-sm font-semibold">
+            <button className="text-error-600 bg-error-100 rounded-md p-2 text-sm font-semibold">
               Try again
             </button>
           </div>
@@ -53,9 +84,11 @@ export function FileItem({ name, size }: FileItemProps) {
 
         {state === 'complete' ? (
           <CheckCircle weight="fill" className="h-5 w-5 text-emerald-600" />
+        ) : state === 'progress' ? (
+          <SpinnerGap className="h-5 w-5 animate-spin text-emerald-600" />
         ) : (
-          <Button variant="ghost">
-            <Trash className="h-5 w-5 text-zinc-500 transition group-hover:text-red-600" />
+          <Button type="button" variant="ghost" className={deleteButton()}>
+            <Trash className="h-5 w-5" />
           </Button>
         )}
       </div>
