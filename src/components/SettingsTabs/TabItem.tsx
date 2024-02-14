@@ -11,7 +11,7 @@ export function TabItem({ value, title }: TabItemProps) {
       className="group relative px-1 pb-2 text-sm font-medium text-zinc-500 outline-none hover:text-emerald-600 data-[state=active]:text-emerald-600"
       value={value}
     >
-      <span className="rounded group-focus-visible:ring-2 group-focus-visible:ring-emerald-400 group-focus-visible:ring-offset-4">
+      <span className="whitespace-nowrap rounded group-focus-visible:ring-2 group-focus-visible:ring-emerald-400 group-focus-visible:ring-offset-4">
         {title}
       </span>
 
