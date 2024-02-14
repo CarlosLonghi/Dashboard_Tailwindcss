@@ -11,6 +11,7 @@ import {
   TextItalic,
 } from '@phosphor-icons/react'
 import { Textarea } from '../Form/Textarea'
+import { Button } from '../Button'
 
 export function TabContentDetails() {
   return (
@@ -27,19 +28,12 @@ export function TabContentDetails() {
         </div>
 
         <div className="flex items-center gap-2 text-sm">
-          <button
-            className="rounded-lg border border-zinc-300 px-4 py-2 font-semibold text-zinc-700 shadow-sm transition hover:bg-zinc-50"
-            type="button"
-          >
+          <Button variant="outline" type="button">
             Cancel
-          </button>
-          <button
-            className="rounded-lg border border-zinc-300 bg-emerald-600 px-4 py-2 font-semibold text-zinc-50 shadow-sm transition hover:bg-emerald-700"
-            type="submit"
-            form="settings"
-          >
+          </Button>
+          <Button variant="primary" type="submit" form="settings">
             Save
-          </button>
+          </Button>
         </div>
       </div>
       <form
@@ -192,18 +186,12 @@ export function TabContentDetails() {
         </div>
 
         <div className="flex items-center justify-end gap-2 pt-4">
-          <button
-            className="rounded-lg border border-zinc-300 px-4 py-2 font-semibold text-zinc-700 shadow-sm transition hover:bg-zinc-50"
-            type="button"
-          >
+          <Button variant="outline" type="button">
             Cancel
-          </button>
-          <button
-            className="rounded-lg border border-zinc-300 bg-emerald-600 px-4 py-2 font-semibold text-zinc-50 shadow-sm transition hover:bg-emerald-700"
-            type="submit"
-          >
+          </Button>
+          <Button variant="primary" type="submit">
             Save
-          </button>
+          </Button>
         </div>
       </form>
     </Tabs.Content>
