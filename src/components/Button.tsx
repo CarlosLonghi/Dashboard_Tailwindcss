@@ -10,7 +10,8 @@ const button = tv({
   variants: {
     variant: {
       primary: 'bg-emerald-600 text-zinc-50 hover:bg-emerald-700',
-      ghost: 'group rounded p-1 hover:bg-zinc-100 shadow-none text-zinc-500',
+      ghost:
+        'group rounded p-1 hover:bg-zinc-100 shadow-none text-zinc-500 dark:hover:bg-zinc-800 dark:text-zinc-200',
       outline: 'group border border-zinc-300 text-zinc-700 hover:bg-zinc-50',
     },
   },
