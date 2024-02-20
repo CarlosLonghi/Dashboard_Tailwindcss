@@ -8,7 +8,7 @@ export interface TabItemProps {
 export function TabItem({ value, title }: TabItemProps) {
   return (
     <Tabs.Trigger
-      className="group relative px-1 pb-2 text-sm font-medium text-zinc-500 outline-none hover:text-emerald-600 data-[state=active]:text-emerald-600"
+      className="group relative px-1 pb-2 text-sm font-medium text-zinc-500 outline-none hover:text-emerald-600 data-[state=active]:text-emerald-600 dark:text-zinc-400 dark:hover:text-emerald-500 dark:data-[state=active]:text-emerald-500"
       value={value}
     >
       <span className="whitespace-nowrap rounded group-focus-visible:ring-2 group-focus-visible:ring-emerald-400 group-focus-visible:ring-offset-4">

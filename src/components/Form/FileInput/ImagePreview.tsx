@@ -15,7 +15,7 @@ export function ImagePreview() {
 
   if (previewURL === null) {
     return (
-      <div className="flex h-14 w-14 items-center justify-center rounded-full bg-emerald-50">
+      <div className="flex h-14 w-14 items-center justify-center rounded-full bg-emerald-50 dark:bg-emerald-500/10">
         <User className="h-8 w-8 text-emerald-500" />
       </div>
     )

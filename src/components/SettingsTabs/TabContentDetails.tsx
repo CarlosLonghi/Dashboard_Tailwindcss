@@ -16,10 +16,12 @@ import { Button } from '../Button'
 export function TabContentDetails() {
   return (
     <Tabs.Content className="mt-6 flex flex-col outline-none" value="tab1">
-      <div className="flex flex-col justify-between gap-4 border-b border-zinc-200 pb-5 lg:flex-row lg:items-center">
+      <div className="flex flex-col justify-between gap-4 border-b border-zinc-200 pb-5 lg:flex-row lg:items-center dark:border-zinc-400">
         <div className="space-y-1">
-          <h2 className="text-lg font-medium text-zinc-900">Personal info</h2>
-          <span className="text-sm text-zinc-500">
+          <h2 className="text-lg font-medium text-zinc-900 dark:text-zinc-200">
+            Personal info
+          </h2>
+          <span className="text-sm text-zinc-500 dark:text-zinc-400">
             Update your photo and personal details here.
           </span>
         </div>
@@ -35,13 +37,13 @@ export function TabContentDetails() {
       </div>
       <form
         id="settings"
-        className="mt-5 flex w-full flex-col gap-5 divide-y divide-zinc-200"
+        className="mt-5 flex w-full flex-col gap-5 divide-y divide-zinc-200 dark:divide-zinc-700"
         action=""
       >
         <div className="flex flex-col gap-3 lg:grid lg:grid-cols-form lg:items-center">
           <label
             htmlFor="firstName"
-            className="text-sm font-medium text-zinc-700"
+            className="text-sm font-medium text-zinc-700 dark:text-zinc-300"
           >
             Name
           </label>
@@ -52,7 +54,7 @@ export function TabContentDetails() {
 
             <label
               htmlFor="lastName"
-              className="text-sm font-medium text-zinc-700 lg:sr-only"
+              className="text-sm font-medium text-zinc-700 lg:sr-only dark:text-zinc-300"
             >
               Last name
             </label>
@@ -63,7 +65,10 @@ export function TabContentDetails() {
         </div>
 
         <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form lg:items-center">
-          <label htmlFor="email" className="text-sm font-medium text-zinc-700">
+          <label
+            htmlFor="email"
+            className="text-sm font-medium text-zinc-700 dark:text-zinc-300"
+          >
             Email address
           </label>
           <Input.Root>
@@ -79,9 +84,12 @@ export function TabContentDetails() {
         </div>
 
         <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form lg:items-center">
-          <label htmlFor="photo" className="text-sm font-medium text-zinc-700">
+          <label
+            htmlFor="photo"
+            className="text-sm font-medium text-zinc-700 dark:text-zinc-300"
+          >
             Your photo
-            <span className="mt-0.5 block text-sm font-normal text-zinc-500">
+            <span className="mt-0.5 block text-sm font-normal text-zinc-500 dark:text-zinc-400">
               This will be displayed on your profile.
             </span>
           </label>
@@ -93,7 +101,10 @@ export function TabContentDetails() {
         </div>
 
         <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form lg:items-center">
-          <label htmlFor="role" className="text-sm font-medium text-zinc-700">
+          <label
+            htmlFor="role"
+            className="text-sm font-medium text-zinc-700 dark:text-zinc-300"
+          >
             Role
           </label>
           <Input.Root>
@@ -104,7 +115,7 @@ export function TabContentDetails() {
         <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form lg:items-center">
           <label
             htmlFor="country"
-            className="text-sm font-medium text-zinc-700"
+            className="text-sm font-medium text-zinc-700 dark:text-zinc-300"
           >
             Country
           </label>
@@ -117,7 +128,7 @@ export function TabContentDetails() {
         <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form lg:items-center">
           <label
             htmlFor="timezone"
-            className="text-sm font-medium text-zinc-700"
+            className="text-sm font-medium text-zinc-700 dark:text-zinc-300"
           >
             Timezone
           </label>
@@ -128,9 +139,12 @@ export function TabContentDetails() {
         </div>
 
         <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form lg:items-center">
-          <label htmlFor="bio" className="text-sm font-medium text-zinc-700">
+          <label
+            htmlFor="bio"
+            className="text-sm font-medium text-zinc-700 dark:text-zinc-300"
+          >
             Bio
-            <span className="mt-0.5 block text-sm font-normal text-zinc-500">
+            <span className="mt-0.5 block text-sm font-normal text-zinc-500 dark:text-zinc-400">
               Write a short introduction.
             </span>
           </label>
@@ -175,10 +189,10 @@ export function TabContentDetails() {
         <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form lg:items-center">
           <label
             htmlFor="projects"
-            className="text-sm font-medium text-zinc-700"
+            className="text-sm font-medium text-zinc-700 dark:text-zinc-300"
           >
             Portfolio projects
-            <span className="mt-0.5 block text-sm font-normal text-zinc-500">
+            <span className="mt-0.5 block text-sm font-normal text-zinc-500 dark:text-zinc-400">
               Share a few snippets of your work.
             </span>
           </label>
